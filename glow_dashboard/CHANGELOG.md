@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.1
+
+- Wall tablets: the add-on's port (8199) is on by default. Before, it started empty, so turning on
+  "No sign-in" alone opened nothing. Without "No sign-in" the port only serves the page and every
+  tablet signs in with its own Home Assistant account.
+
 ## 0.1.0
 
 - First release as a Home Assistant add-on: in the sidebar, signed in as whoever opens it.

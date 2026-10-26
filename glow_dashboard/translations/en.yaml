@@ -2,8 +2,8 @@ configuration:
   no_sign_in:
     name: No sign-in on the home network
     description: >-
-      Wall tablets that open the add-on's own port (set one under Network) show the dashboards
+      Wall tablets that open the add-on's own port (8199, under Network) show the dashboards
       without signing in. Anyone on your Wi-Fi could then control your home through it: only turn
       this on for a home network you trust. The sidebar always uses your own sign-in.
 network:
-  8199/tcp: Wall tablets on your home network (optional)
+  8199/tcp: Wall tablets on your home network (clear it to close the port)

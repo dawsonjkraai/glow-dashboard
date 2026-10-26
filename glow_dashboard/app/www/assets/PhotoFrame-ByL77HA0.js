@@ -1,1 +1,0 @@
-export{r as default}from"./cards-photos-BZXCgCcu.js";

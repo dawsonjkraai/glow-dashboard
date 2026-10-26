@@ -22,9 +22,10 @@ like "Kitchen tablet", works well) and open **Glow** from the sidebar. For a kio
 Fully Kiosk, open Glow from the sidebar once and use the address your browser shows then as the
 kiosk's start page.
 
-**On the add-on's own port.** Under the add-on's **Network** settings, give "Wall tablets on your home
-network" a port number (8199, say) and open `http://<your Home Assistant's IP>:<that port>/` on the
-tablet. It asks for your Home Assistant's address and a sign-in the first time.
+**On the add-on's own port.** Open `http://<your Home Assistant's IP>:8199/` on the tablet. It asks
+for your Home Assistant's address and a sign-in the first time (or none at all with **No sign-in**,
+below). The port is on by default; change its number, or clear it to close it, under the add-on's
+**Network** settings, then restart the add-on.
 
 ### No sign-in
 

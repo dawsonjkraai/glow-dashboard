@@ -1,0 +1,1 @@
+import"./panel-DXBma_wS.js";function e(){let e=window.fully;return e&&typeof e==`object`?e:null}var t={secure:typeof window<`u`&&window.isSecureContext,wakeLock:typeof navigator<`u`&&`wakeLock`in navigator,vibrate:typeof navigator<`u`&&typeof navigator.vibrate==`function`,get fully(){return e()!==null}};export{t as n,e as t};

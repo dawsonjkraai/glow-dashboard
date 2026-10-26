@@ -1,15 +1,15 @@
 {
-  "version": "0.1.0",
-  "build": "DR1C8u_V",
-  "builtAt": "2026-10-26T18:11:56.005Z",
-  "entry": "assets/index-DR1C8u_V.js",
+  "version": "0.1.1",
+  "build": "Dq0p9Pbr",
+  "builtAt": "2026-10-26T18:47:59.715Z",
+  "entry": "assets/index-Dq0p9Pbr.js",
   "scripts": [
-    "assets/index-DR1C8u_V.js"
+    "assets/index-Dq0p9Pbr.js"
   ],
   "css": [
     "assets/panel-BGb-smOQ.css"
   ],
   "preload": [
-    "assets/panel-CryQXxVX.js"
+    "assets/panel-DXBma_wS.js"
   ]
 }

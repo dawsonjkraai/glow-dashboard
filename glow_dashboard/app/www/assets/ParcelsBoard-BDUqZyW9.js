@@ -1,0 +1,1 @@
+export{i as default}from"./cards-parcels-BGSAsBQl.js";

@@ -1,7 +1,7 @@
 # The Glow Dashboard add-on (the template; scripts/release-addon.mjs fills in the version and the
 # repository's address, and copies the built panel into app/).
 name: Glow Dashboard
-version: "0.1.0"
+version: "0.1.1"
 slug: glow_dashboard
 description: A touch-first dashboard for wall tablets and phones, built from your home in a few questions.
 url: "https://github.com/dawsonjkraai/glow-dashboard"
@@ -25,12 +25,13 @@ panel_admin: false
 homeassistant_api: true
 hassio_api: true
 
-# Optional: wall tablets on the home network open the dashboard on this port (off until you give
-# it a port number in the add-on's Network settings).
+# Wall tablets on the home network open the dashboard on this port. On by default: without
+# "no sign-in" it only serves the page and each tablet signs in with its own Home Assistant
+# account. (It used to start empty, and turning on "no sign-in" alone opened nothing.)
 ports:
-  8199/tcp: null
+  8199/tcp: 8199
 ports_description:
-  8199/tcp: Wall tablets on your home network (optional)
+  8199/tcp: Wall tablets on your home network (clear it to close the port)
 
 options:
   no_sign_in: false

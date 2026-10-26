@@ -1,1 +1,0 @@
-export{t as default}from"./cards-appliances-CPq47tOg.js";
