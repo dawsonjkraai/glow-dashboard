@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{{ page.title }} · Glow Dashboard guides</title>
+    <meta name="description" content="{{ page.description }}" />
+    <meta name="theme-color" content="#0a0a0b" />
+    <link rel="icon" href="{{ '/assets/icon.png' | relative_url }}" />
+    <link rel="preload" href="{{ '/assets/fonts/urbanist.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}" />
+  </head>
+  <body class="guide-page">
+    <header class="nav solid">
+      <a class="mark" href="{{ '/' | relative_url }}" aria-label="Glow Dashboard, home"><img src="{{ '/assets/icon.png' | relative_url }}" width="32" height="32" alt="" /><span>Glow</span></a>
+      <nav aria-label="Main">
+        <a href="{{ '/#demo' | relative_url }}">Try it</a>
+        <a href="{{ '/guides/getting-started.html' | relative_url }}" aria-current="true">Guides</a>
+        <a href="https://github.com/dawsonjkraai/glow-dashboard">GitHub</a>
+        <a class="button" href="https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fdawsonjkraai%2Fglow-dashboard">Add to Home Assistant</a>
+      </nav>
+    </header>
+
+    {% assign guides = site.pages | where_exp: "p", "p.path contains 'guides/'" | where_exp: "p", "p.order" | sort: "order" %}
+    <div class="doc-wrap">
+      <aside class="doc-side" aria-label="All guides">
+        {% assign groups = "Start|Make it yours|Every day|When something's off" | split: "|" %}
+        {% for g in groups %}
+          {% assign inside = guides | where: "group", g %}
+          {% if inside.size > 0 %}
+            <p class="doc-group">{{ g }}</p>
+            <ul>
+              {% for p in inside %}
+                <li><a href="{{ p.url | relative_url }}"{% if p.url == page.url %} aria-current="page"{% endif %}>{{ p.title }}</a></li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        {% endfor %}
+      </aside>
+
+      <main class="doc">
+        <h1>{{ page.title }}</h1>
+        <p class="doc-lede">{{ page.description }}</p>
+        <p class="doc-time">{{ page.minutes }} min read</p>
+        <article class="doc-body">
+          {{ content }}
+        </article>
+
+        {% for p in guides %}
+          {% if p.url == page.url %}
+            {% assign i = forloop.index0 %}
+          {% endif %}
+        {% endfor %}
+        {% assign prev_i = i | minus: 1 %}
+        {% assign next_i = i | plus: 1 %}
+        <nav class="doc-pager" aria-label="More guides">
+          {% if i > 0 %}{% assign prev = guides[prev_i] %}<a class="prev" href="{{ prev.url | relative_url }}"><span>Before</span>{{ prev.title }}</a>{% else %}<span></span>{% endif %}
+          {% if next_i < guides.size %}{% assign next = guides[next_i] %}<a class="next" href="{{ next.url | relative_url }}"><span>Next</span>{{ next.title }}</a>{% endif %}
+        </nav>
+      </main>
+    </div>
+
+    <footer class="doc-foot">
+      <span>Glow Dashboard · MIT licence · Not affiliated with Home Assistant or Nabu Casa.</span>
+      <a href="https://github.com/dawsonjkraai/glow-dashboard/issues">Found something wrong? Tell us on GitHub</a>
+    </footer>
+    <script>document.documentElement.classList.remove('no-js');</script>
+  </body>
+</html>

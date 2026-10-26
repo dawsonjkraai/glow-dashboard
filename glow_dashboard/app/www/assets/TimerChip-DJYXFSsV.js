@@ -1,1 +1,0 @@
-export{p as default}from"./cards-info-BRlYnT66.js";

@@ -6,7 +6,7 @@ card can then be moved, resized and swapped by touch.
 
 ## Getting started
 
-1. Install the add-on and press **Start**.
+1. Install the app and press **Start**.
 2. Turn on **Show in sidebar** and open **Glow** from Home Assistant's sidebar.
 3. The setup asks where the screen goes, what it should show, which rooms and which look, and draws
    the pages before it makes them. Press **Build it**.
@@ -22,23 +22,24 @@ like "Kitchen tablet", works well) and open **Glow** from the sidebar. For a kio
 Fully Kiosk, open Glow from the sidebar once and use the address your browser shows then as the
 kiosk's start page.
 
-**On the add-on's own port.** Open `http://<your Home Assistant's IP>:8199/` on the tablet. It asks
+**On the app's own port.** Open `http://<your Home Assistant's IP>:8199/` on the tablet. It asks
 for your Home Assistant's address and a sign-in the first time (or none at all with **No sign-in**,
-below). The port is on by default; change its number, or clear it to close it, under the add-on's
-**Network** settings, then restart the add-on.
+below). The port is on by default; change its number, or clear it to close it, under the app's
+**Network** settings, then restart the app. Open it by the IP address: with **No sign-in** on, a
+name such as `homeassistant.local` isn't accepted.
 
 ### No sign-in
 
-With **No sign-in on the home network** turned on, tablets that open the add-on's port show the
-dashboards without signing in at all. The add-on then acts for them with the access Home Assistant
-gives add-ons. It refuses the dangerous parts (add-ons, backups, restarts, accounts), but anyone on
+With **No sign-in on the home network** turned on, tablets that open the app's port show the
+dashboards without signing in at all. The app then acts for them with the access Home Assistant
+gives apps. It refuses the dangerous parts (apps, backups, restarts, accounts), but anyone on
 your Wi-Fi could still switch your lights, unlock a door or watch a camera through it. **Only turn it
 on for a home network you trust**, never on a guest network. The sidebar always uses your own
 sign-in either way.
 
-## What runs in the add-on
+## What runs in the app
 
-Besides serving the dashboard, the add-on does a few jobs once for every screen, so a cheap tablet
+Besides serving the dashboard, the app does a few jobs once for every screen, so a cheap tablet
 doesn't have to:
 
 - **Album art** from music services is kept on your Home Assistant's disk and served on your home
@@ -50,8 +51,7 @@ doesn't have to:
 
 ## Requirements
 
-- Home Assistant OS or Supervised (add-ons need the Supervisor). On other installs, use the panel's
-  zip install from the project's page instead.
+- Home Assistant OS (apps need its Supervisor; Container and Core installs don't have it).
 - A browser from the last few years. It is tuned for the Amazon Fire HD 10 (Chromium 114).
 
 ## Privacy

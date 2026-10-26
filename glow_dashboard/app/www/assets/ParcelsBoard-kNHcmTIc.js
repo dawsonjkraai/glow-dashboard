@@ -1,1 +1,0 @@
-export{i as default}from"./cards-parcels-BI6Ap6Q5.js";

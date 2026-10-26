@@ -1,0 +1,19 @@
+# GitHub Pages: the landing page (index.html, as it is), the demo house (demo/, the built panel,
+# as it is) and the guides (guides/*.md, through _layouts/guide.html).
+title: Glow Dashboard
+description: A touch-first Home Assistant dashboard for wall tablets.
+baseurl: /glow-dashboard
+url: https://dawsonjkraai.github.io
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+defaults:
+  - scope:
+      path: guides
+    values:
+      layout: guide

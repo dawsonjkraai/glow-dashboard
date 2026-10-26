@@ -1,0 +1,1 @@
+export{n as default}from"./cards-frigate-BELYLj5X.js";

@@ -1,1 +1,0 @@
-export{n as default}from"./cards-frigate-iIzArvid.js";

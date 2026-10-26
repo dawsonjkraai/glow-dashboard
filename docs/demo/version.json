@@ -1,0 +1,15 @@
+{
+  "version": "0.1.3",
+  "build": "CgtUU6ha",
+  "builtAt": "2026-10-26T19:31:30.306Z",
+  "entry": "assets/index-CgtUU6ha.js",
+  "scripts": [
+    "assets/index-CgtUU6ha.js"
+  ],
+  "css": [
+    "assets/panel-BGb-smOQ.css"
+  ],
+  "preload": [
+    "assets/panel-Bs0V4n1E.js"
+  ]
+}

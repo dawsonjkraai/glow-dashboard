@@ -1,0 +1,1 @@
+export{n as default}from"./cards-parcels-DR6cLlGz.js";

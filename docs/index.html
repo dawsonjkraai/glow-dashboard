@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Glow Dashboard: a touch-first Home Assistant dashboard for wall tablets</title>
+    <meta name="description" content="A touch-first Home Assistant dashboard for wall tablets. Five questions build it from your home; then every card moves, resizes and swaps by touch. A Home Assistant app, free and open source." />
+    <meta name="theme-color" content="#0a0a0b" />
+    <meta property="og:title" content="Glow Dashboard" />
+    <meta property="og:description" content="Your home, on the wall. A touch-first Home Assistant dashboard for wall tablets." />
+    <meta property="og:image" content="https://dawsonjkraai.github.io/glow-dashboard/assets/shots/home.webp" />
+    <link rel="icon" href="assets/icon.png" />
+    <link rel="preload" href="assets/fonts/urbanist.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="assets/site.css" />
+  </head>
+  <body>
+    <a class="skip" href="#demo">Skip to the demo</a>
+
+    <header class="nav">
+      <a class="mark" href="./" aria-label="Glow Dashboard, home"><img src="assets/icon.png" width="32" height="32" alt="" /><span>Glow</span></a>
+      <nav aria-label="Main">
+        <a href="#demo">Try it</a>
+        <a href="guides/getting-started.html">Guides</a>
+        <a href="https://github.com/dawsonjkraai/glow-dashboard">GitHub</a>
+        <a class="button" href="https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fdawsonjkraai%2Fglow-dashboard">Add to Home Assistant</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- The hero: the sentence split by a reel of the demo house's own screens, held while it turns. -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-stage">
+          <h1 id="hero-title" class="hero-line">
+            <span class="half first">Your home,</span>
+            <span class="reel" aria-hidden="true"><span class="reel-track">
+              <span class="frame"><img src="assets/shots/home.webp" width="2560" height="1600" alt="" /></span>
+              <span class="frame"><img src="assets/shots/lights.webp" width="2560" height="1600" alt="" loading="lazy" /></span>
+              <span class="frame"><img src="assets/shots/mode-shower.webp" width="2560" height="1600" alt="" loading="lazy" /></span>
+              <span class="frame"><img src="assets/shots/music.webp" width="2560" height="1600" alt="" loading="lazy" /></span>
+              <span class="frame"><img src="assets/shots/saver-player.webp" width="2560" height="1600" alt="" loading="lazy" /></span>
+            </span></span>
+            <span class="half second">on the wall.</span>
+          </h1>
+          <p class="hero-sub">Glow Dashboard is a touch-first Home Assistant dashboard for wall tablets. Five questions build it from your home; then every card moves, resizes and swaps by touch.</p>
+        </div>
+      </section>
+
+      <!-- The product, running: the page names steer the real demo house beside them. -->
+      <section class="show" id="demo" aria-labelledby="demo-title">
+        <div class="show-index" data-enter>
+          <h2 id="demo-title">Touch the demo house</h2>
+          <div class="names" role="tablist" aria-label="Pages of the demo house">
+            <button type="button" role="tab" class="name is-on" aria-selected="true" data-page="Home">Home</button>
+            <button type="button" role="tab" class="name" aria-selected="false" data-page="Lights">Lights</button>
+            <button type="button" role="tab" class="name" aria-selected="false" data-page="Climate">Climate</button>
+            <button type="button" role="tab" class="name" aria-selected="false" data-page="Audio">Music</button>
+            <button type="button" role="tab" class="name" aria-selected="false" data-page="Security">Security</button>
+            <button type="button" role="tab" class="name" aria-selected="false" data-page="Family">Family</button>
+          </div>
+          <p class="note">The real dashboard, running a made-up house in your browser. Dim a light, start a mode, play a playlist: nothing here reaches a real home.</p>
+        </div>
+        <div class="show-stage">
+          <div class="sheet" data-ui>
+            <img class="poster" src="assets/shots/home.webp" width="2560" height="1600" alt="" loading="lazy" />
+            <iframe title="The Glow Dashboard demo house" data-src="demo/index.html?demo=1" tabindex="0"></iframe>
+            <button type="button" class="wake" hidden>Start the demo</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- How it gets built: the same card, a step further along in each field. -->
+      <section class="steps" id="how" aria-labelledby="how-title">
+        <div class="field f1" data-enter>
+          <h2 id="how-title">Built in five questions</h2>
+          <div class="card" data-ui>
+            <div class="card-head"><span>New dashboard</span><span class="pill">1 of 5</span></div>
+            <div class="where">
+              <span class="opt">On the wall</span>
+              <span class="opt on">In one room</span>
+              <span class="opt">On a phone</span>
+              <span class="opt">For the kids</span>
+            </div>
+            <div class="chips"><span class="chip">Hallway</span><span class="chip on">Kitchen</span><span class="chip">Office</span></div>
+          </div>
+          <p class="clause">First, where it goes and which room it’s in.</p>
+        </div>
+        <div class="field f2" data-enter>
+          <div class="card" data-ui>
+            <div class="card-head"><span>Kitchen</span><span class="pill">2 of 5</span></div>
+            <ul class="topics">
+              <li class="on">Lights <b>23</b></li>
+              <li class="on">Music <b>15</b></li>
+              <li class="on">Climate <b>32</b></li>
+              <li>Cameras <b>6</b></li>
+              <li class="on">Scenes <b>15</b></li>
+              <li>Energy <b>18</b></li>
+            </ul>
+          </div>
+          <p class="clause">Then what it shows, and which rooms.</p>
+        </div>
+        <div class="field f3" data-enter>
+          <div class="card" data-ui>
+            <div class="card-head"><span>Kitchen</span><span class="pill">4 of 5</span></div>
+            <div class="looks">
+              <span class="look graphite"></span><span class="look aurora on"></span><span class="look ember"></span>
+              <span class="look midnight"></span><span class="look console"></span><span class="look faceplate"></span>
+            </div>
+            <div class="material"><span class="on">Glass</span><span>Solid</span></div>
+          </div>
+          <p class="clause">Then the look: colours, glass or solid.</p>
+        </div>
+        <div class="field f4" data-enter>
+          <div class="card built" data-ui>
+            <div class="card-head"><span>Kitchen</span><span class="pill">8 pages</span></div>
+            <div class="map">
+              <span class="b w4 h2 lit">Good afternoon</span><span class="b w3 h2">15°</span><span class="b w3 h2">21°</span><span class="b w2 h2">2 home</span>
+              <span class="b w2 h3 amber">Pendants 80%</span><span class="b w2 h3 amber">Ceiling</span><span class="b w4 h3">Kitchen speaker</span><span class="b w4 h1">TV backlight</span>
+              <span class="b w4 h1">Floor lamp</span><span class="b w4 h1">Hallway</span><span class="b w12 h1">Morning · Dinner · Movie · Night</span>
+            </div>
+          </div>
+          <p class="clause">Then it draws the pages, and builds them.</p>
+        </div>
+      </section>
+
+      <!-- What it does, as the product's own command list: type to narrow it down. -->
+      <section class="cmd" id="features" aria-labelledby="features-title" data-ui>
+        <h2 id="features-title" class="cmd-title" data-enter>Everything it does</h2>
+        <label class="cmd-search" data-enter><span class="visually-hidden">Find a feature</span><input type="search" placeholder="Find a feature" autocomplete="off" spellcheck="false" /></label>
+        <ul class="cmd-list" role="listbox" aria-label="Features">
+          <li role="option" aria-selected="true"><span class="cmd-name">Move anything by touch</span><p class="cmd-text">Drag a card to move it, pull a corner to resize it, hold an empty spot to add one. Undo is one tap away.</p></li>
+          <li role="option" aria-selected="false"><span class="cmd-name">Over a hundred card styles</span><p class="cmd-text">Dimmers that fill with a light’s own colour, glowing orbs, capsules, rings, the family’s calendar as lanes, live camera tiles. Pick one from live previews.</p></li>
+          <li role="option" aria-selected="false"><span class="cmd-name">Modes take the screen</span><p class="cmd-text">Shower, theatre, party, bedtime, cooking: a full-screen layer with exactly what that moment needs, a timer, and one big Done to leave.</p></li>
+          <li role="option" aria-selected="false"><span class="cmd-name">Music in every room</span><p class="cmd-text">Tick the rooms, pick a playlist, set each room’s level. With Music Assistant, rooms join and leave without the music skipping.</p></li>
+          <li role="option" aria-selected="false"><span class="cmd-name">Lights that look like light</span><p class="cmd-text">Main lights as big dimmers, ambient ones as glowing chips, and WLED strips showing what their LEDs are doing, live.</p></li>
+          <li role="option" aria-selected="false"><span class="cmd-name">It finds what you add</span><p class="cmd-text">Add an integration to Home Assistant and its cards appear on the page they belong to, with a notice and an Undo.</p></li>
+          <li role="option" aria-selected="false"><span class="cmd-name">A screensaver with the song</span><p class="cmd-text">Clock faces, photos, the sky. When music plays in the room, the song with controls that work without waking the screen.</p></li>
+          <li role="option" aria-selected="false"><span class="cmd-name">Made for a cheap tablet</span><p class="cmd-text">Tuned for the Amazon Fire HD 10 and its old browser: glass or solid cards, motion that keeps to the frame budget. Phones and big screens too.</p></li>
+        </ul>
+        <p class="cmd-empty" hidden>Nothing by that name. Try “music” or “lights”.</p>
+      </section>
+
+      <!-- Every screen, each with its tag. -->
+      <section class="gallery" id="screens" aria-labelledby="screens-title">
+        <h2 id="screens-title" data-enter>Every screen</h2>
+        <div class="tiles">
+          <figure class="tile p1"><img src="assets/shots/home.webp" width="2560" height="1600" alt="The Home page" loading="lazy" style="object-position: 30% 30%" /><figcaption class="strip"><div class="r1"><span>Home</span><span>Graphite</span><span>Glass</span><span>Sky</span></div><div class="r2"><span>Wall tablet</span><span>1280 × 800</span></div></figcaption></figure>
+          <figure class="tile p2"><img src="assets/shots/lights.webp" width="2560" height="1600" alt="The Lights page" loading="lazy" style="object-position: 25% 20%" /><figcaption class="strip"><div class="r1"><span>Lights</span><span>Dimmers</span><span>Chips</span><span>Rooms</span></div><div class="r2"><span>Wall tablet</span><span>1280 × 800</span></div></figcaption></figure>
+          <figure class="tile p3"><img src="assets/shots/mode-shower.webp" width="2560" height="1600" alt="Shower mode" loading="lazy" style="object-position: 10% 40%" /><figcaption class="strip"><div class="r1"><span>Shower</span><span>Mode</span><span>Timer</span><span>Fan</span></div><div class="r2"><span>Bathroom</span><span>Full screen</span></div></figcaption></figure>
+          <figure class="tile p4"><img src="assets/shots/music.webp" width="2560" height="1600" alt="The Audio page" loading="lazy" style="object-position: 70% 30%" /><figcaption class="strip"><div class="r1"><span>Music</span><span>Rooms</span><span>Queue</span><span>Levels</span></div><div class="r2"><span>Wall tablet</span><span>1280 × 800</span></div></figcaption></figure>
+          <figure class="tile p2"><img src="assets/shots/climate.webp" width="2560" height="1600" alt="The Climate page" loading="lazy" style="object-position: 20% 30%" /><figcaption class="strip"><div class="r1"><span>Climate</span><span>Heat</span><span>Air</span><span>Rooms</span></div><div class="r2"><span>Wall tablet</span><span>1280 × 800</span></div></figcaption></figure>
+          <figure class="tile p3"><img src="assets/shots/mode-theatre.webp" width="2560" height="1600" alt="Theatre mode" loading="lazy" style="object-position: 50% 50%" /><figcaption class="strip"><div class="r1"><span>Theatre</span><span>Mode</span><span>Remote</span><span>Lights</span></div><div class="r2"><span>Living room</span><span>Full screen</span></div></figcaption></figure>
+          <figure class="tile p4"><img src="assets/shots/saver-player.webp" width="2560" height="1600" alt="The screensaver with the song playing" loading="lazy" style="object-position: 30% 50%" /><figcaption class="strip"><div class="r1"><span>Screensaver</span><span>Song</span><span>Controls</span><span>Night</span></div><div class="r2"><span>Kitchen</span><span>While idle</span></div></figcaption></figure>
+          <figure class="tile p1"><img src="assets/shots/security.webp" width="2560" height="1600" alt="The Security page" loading="lazy" style="object-position: 30% 30%" /><figcaption class="strip"><div class="r1"><span>Security</span><span>Alarm</span><span>Cameras</span><span>Doors</span></div><div class="r2"><span>Wall tablet</span><span>1280 × 800</span></div></figcaption></figure>
+          <figure class="tile p3"><img src="assets/shots/mode-party.webp" width="2560" height="1600" alt="Party mode" loading="lazy" style="object-position: 40% 40%" /><figcaption class="strip"><div class="r1"><span>Party</span><span>Mode</span><span>Light show</span><span>Music</span></div><div class="r2"><span>Whole house</span><span>Full screen</span></div></figcaption></figure>
+          <figure class="tile p4"><img src="assets/shots/family.webp" width="2560" height="1600" alt="The Family page" loading="lazy" style="object-position: 20% 20%" /><figcaption class="strip"><div class="r1"><span>Family</span><span>Calendars</span><span>Lists</span><span>Bin day</span></div><div class="r2"><span>Wall tablet</span><span>1280 × 800</span></div></figcaption></figure>
+          <figure class="tile p1"><img src="assets/shots/theme-aurora.webp" width="2560" height="1600" alt="The Aurora look" loading="lazy" style="object-position: 30% 30%" /><figcaption class="strip"><div class="r1"><span>Aurora</span><span>Look</span><span>Glass</span><span>Lights</span></div><div class="r2"><span>Wall tablet</span><span>1280 × 800</span></div></figcaption></figure>
+          <figure class="tile p2"><img src="assets/shots/light-sheet.webp" width="2560" height="1600" alt="A light's sheet with its colour wheel" loading="lazy" style="object-position: 50% 50%" /><figcaption class="strip"><div class="r1"><span>Light</span><span>Colour</span><span>White</span><span>Effects</span></div><div class="r2"><span>Pendants</span><span>Kitchen</span></div></figcaption></figure>
+          <figure class="tile p3"><img src="assets/shots/mode-bedtime.webp" width="2560" height="1600" alt="Bedtime mode" loading="lazy" style="object-position: 50% 50%" /><figcaption class="strip"><div class="r1"><span>Bedtime</span><span>Mode</span><span>Doors</span><span>Alarm</span></div><div class="r2"><span>Whole house</span><span>Full screen</span></div></figcaption></figure>
+          <figure class="tile p4"><img src="assets/shots/theme-faceplate.webp" width="2560" height="1600" alt="The Faceplate look" loading="lazy" style="object-position: 30% 30%" /><figcaption class="strip"><div class="r1"><span>Faceplate</span><span>Look</span><span>Solid</span><span>Light</span></div><div class="r2"><span>Wall tablet</span><span>1280 × 800</span></div></figcaption></figure>
+          <figure class="tile p1"><img src="assets/shots/add-card.webp" width="2560" height="1600" alt="Adding a card: what it shows, then how it looks" loading="lazy" style="object-position: 65% 40%" /><figcaption class="strip"><div class="r1"><span>Add a card</span><span>Search</span><span>Styles</span><span>Preview</span></div><div class="r2"><span>Edit mode</span><span>Any page</span></div></figcaption></figure>
+          <figure class="tile p2"><img src="assets/shots/phone-home.webp" width="1170" height="2532" alt="The Home page on a phone" loading="lazy" style="object-position: 50% 0%" /><figcaption class="strip"><div class="r1"><span>Home</span><span>Phone</span><span>Glass</span><span>Sky</span></div><div class="r2"><span>Phone</span><span>390 × 844</span></div></figcaption></figure>
+        </div>
+      </section>
+
+      <!-- The guides: a narrow list, each row its reading time. -->
+      <section class="guides" id="guides" aria-labelledby="guides-title">
+        <div class="guides-col">
+          <h2 id="guides-title" data-enter>Guides</h2>
+          <p class="group" data-enter>Start</p>
+          <ul data-enter>
+            <li><a href="guides/getting-started.html"><span class="dot"></span>Getting started</a><span class="time">5 min</span></li>
+            <li><a href="guides/setup-wizard.html"><span class="dot"></span>The setup wizard</a><span class="time">5 min</span></li>
+            <li><a href="guides/wall-tablets.html"><span class="dot"></span>Wall tablets</a><span class="time">5 min</span></li>
+          </ul>
+          <p class="group" data-enter>Make it yours</p>
+          <ul data-enter>
+            <li><a href="guides/editing.html"><span class="dot"></span>Editing your dashboard</a><span class="time">6 min</span></li>
+            <li><a href="guides/looks.html"><span class="dot"></span>Colours and backgrounds</a><span class="time">4 min</span></li>
+          </ul>
+          <p class="group" data-enter>Every day</p>
+          <ul data-enter>
+            <li><a href="guides/modes.html"><span class="dot"></span>Modes</a><span class="time">6 min</span></li>
+            <li><a href="guides/music.html"><span class="dot"></span>Music</a><span class="time">5 min</span></li>
+            <li><a href="guides/lights.html"><span class="dot"></span>Lights</a><span class="time">4 min</span></li>
+            <li><a href="guides/screensaver-and-night.html"><span class="dot"></span>Screensaver and night</a><span class="time">4 min</span></li>
+            <li><a href="guides/found-automatically.html"><span class="dot"></span>Found automatically</a><span class="time">3 min</span></li>
+          </ul>
+          <p class="group" data-enter>When something’s off</p>
+          <ul data-enter>
+            <li><a href="guides/troubleshooting.html"><span class="dot"></span>Troubleshooting</a><span class="time">6 min</span></li>
+          </ul>
+        </div>
+        <figure class="guides-pic" data-enter><img src="assets/shots/phone-home.webp" width="1170" height="2532" alt="The Home page on a phone: the same dashboard, laid out for one hand." loading="lazy" /></figure>
+      </section>
+
+      <!-- Questions people ask first. -->
+      <section class="faq" id="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">Questions</h2>
+        <div class="faq-list">
+          <details name="faq" open>
+            <summary>Does it replace my Home Assistant dashboards?<span class="pm" aria-hidden="true"></span></summary>
+            <p>No. Glow is a Home Assistant app with its own place in the sidebar. Your Home Assistant dashboards stay exactly as they are, and you can use both.</p>
+          </details>
+          <details name="faq">
+            <summary>Which tablets does it run on?<span class="pm" aria-hidden="true"></span></summary>
+            <p>Any tablet or phone with a browser from the last few years. It is tuned for the Amazon Fire HD 10, whose browser is old and slow, so everything else has room to spare. Kiosk browsers like Fully Kiosk work well.</p>
+          </details>
+          <details name="faq">
+            <summary>Do I need Home Assistant OS?<span class="pm" aria-hidden="true"></span></summary>
+            <p>Apps need Home Assistant OS. If you run Home Assistant in Docker or as Core, the app store isn’t there, so this way of installing isn’t available to you yet.</p>
+          </details>
+          <details name="faq">
+            <summary>Where are my dashboards kept?<span class="pm" aria-hidden="true"></span></summary>
+            <p>In Home Assistant itself, so every screen sees the same dashboards and nothing is lost if a tablet breaks. Settings › Backup keeps a copy as a file too.</p>
+          </details>
+          <details name="faq">
+            <summary>Can each tablet show a different dashboard?<span class="pm" aria-hidden="true"></span></summary>
+            <p>Yes. Make a dashboard for the kitchen, one for the hallway and one for a phone, then pick one per screen under Settings › This screen.</p>
+          </details>
+          <details name="faq">
+            <summary>Does it work without the internet?<span class="pm" aria-hidden="true"></span></summary>
+            <p>Yes. It talks only to your Home Assistant. Album art comes from the music services’ own picture servers, and the app keeps a copy of each so tablets load it from your home network.</p>
+          </details>
+          <details name="faq">
+            <summary>Is the no-sign-in option safe?<span class="pm" aria-hidden="true"></span></summary>
+            <p>Only on a home network you trust. With it on, tablets that open the app’s port control your home without signing in, and so could anyone else on your Wi-Fi. It refuses the dangerous parts, like apps, backups and restarts. It is off unless you turn it on.</p>
+          </details>
+          <details name="faq">
+            <summary>What does it cost?<span class="pm" aria-hidden="true"></span></summary>
+            <p>Nothing. Glow Dashboard is free and open source under the MIT licence.</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- The close: one word, and it is the action. -->
+      <section class="install" aria-labelledby="install-title">
+        <a class="install-band" href="https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fdawsonjkraai%2Fglow-dashboard">
+          <span class="install-next">Adds Glow’s repository to your Home Assistant. Then install it from the app store and press Start.</span>
+          <svg class="install-arrow" viewBox="0 0 48 48" aria-hidden="true"><path d="M12 36 36 12M16 12h20v20" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          <h2 id="install-title" class="install-word">Install</h2>
+        </a>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <div class="tile statement">
+        <p class="say">Made for one family’s wall, shared for yours.</p>
+        <p class="legal">MIT licence. Not affiliated with Home Assistant or Nabu Casa. The demo house and its people are made up.</p>
+      </div>
+      <nav class="tile links" aria-label="More">
+        <a href="guides/getting-started.html">Guides</a>
+        <a href="#demo">Try the demo</a>
+        <a href="https://github.com/dawsonjkraai/glow-dashboard">GitHub</a>
+        <a href="https://github.com/dawsonjkraai/glow-dashboard/blob/main/glow_dashboard/CHANGELOG.md">Changelog</a>
+      </nav>
+      <div class="tile now">
+        <p class="label">On your wall now</p>
+        <p class="clock" data-clock>12:00</p>
+        <p class="date" data-date>&nbsp;</p>
+      </div>
+      <a class="tile report" href="https://github.com/dawsonjkraai/glow-dashboard/issues"><span class="label">Found a bug?</span><span class="big">Tell us on GitHub</span></a>
+      <div class="tile wordmark" aria-hidden="true">Glow</div>
+      <a class="tile next" href="guides/getting-started.html"><span>Read the guides</span><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M12 36 36 12M16 12h20v20" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+    </footer>
+
+    <script src="assets/site.js" defer></script>
+  </body>
+</html>
