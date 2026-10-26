@@ -47,6 +47,11 @@
   let want = 'Home';
   let ready = false;
 
+  // The demo runs at a tablet's 1280 × 800, scaled to its stage (on a phone it fills it unscaled).
+  if (sheet && 'ResizeObserver' in window) {
+    new ResizeObserver(() => sheet.style.setProperty('--k', String(sheet.clientWidth / 1280))).observe(sheet);
+  }
+
   const doc = () => {
     try {
       return frame.contentDocument;

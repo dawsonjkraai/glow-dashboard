@@ -261,7 +261,7 @@ input {
 }
 
 .show-index {
-  grid-column: 1 / 6;
+  grid-column: 1 / 4;
   position: sticky;
   top: 72px;
   padding-top: 40px;
@@ -314,22 +314,19 @@ input {
 }
 
 .show-stage {
-  grid-column: 7 / -1;
-  height: 88svh;
-  min-height: 560px;
+  grid-column: 4 / -1;
+  padding: 20px;
   border-radius: var(--radius);
   background: var(--surface);
-  overflow: hidden;
-  position: relative;
 }
 
+/* The whole tablet, always: the demo runs at the Fire HD 10's own 1280 × 800 and is scaled to the
+   stage (--k, set by site.js), so nothing is cut off. */
 .sheet {
-  position: absolute;
-  top: 72px;
-  left: 64px;
-  width: 1280px;
-  height: 800px;
-  border-radius: 14px;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 12px;
   overflow: hidden;
   background: var(--surface-2);
 }
@@ -355,6 +352,13 @@ input {
 }
 
 .sheet iframe {
+  inset: auto;
+  top: 0;
+  left: 0;
+  width: 1280px;
+  height: 800px;
+  transform: scale(var(--k, 0.5));
+  transform-origin: 0 0;
   opacity: 0;
   transition: opacity 400ms var(--ease);
 }
@@ -1205,12 +1209,31 @@ details p {
 /* ---- Tablets ---- */
 
 @media (max-width: 1100px) {
+  .show {
+    display: block;
+  }
+
   .show-index {
-    grid-column: 1 / 5;
+    position: static;
+    padding-top: 0;
+  }
+
+  .names {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 18px;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 6px;
+  }
+
+  .name {
+    font-size: var(--mid);
+    scroll-snap-align: start;
+    white-space: nowrap;
   }
 
   .show-stage {
-    grid-column: 5 / -1;
+    margin-top: 24px;
   }
 
   .steps {
@@ -1300,10 +1323,6 @@ details p {
     max-width: none;
   }
 
-  .show {
-    display: block;
-  }
-
   .guides {
     display: block;
   }
@@ -1314,36 +1333,22 @@ details p {
     margin: 48px auto 0;
   }
 
-  .show-index {
-    position: static;
-    padding-top: 0;
-  }
-
-  .names {
-    flex-direction: row;
-    overflow-x: auto;
-    gap: 18px;
-    scroll-snap-type: x mandatory;
-    padding-bottom: 6px;
-  }
-
-  .name {
-    font-size: var(--mid);
-    scroll-snap-align: start;
-    white-space: nowrap;
-  }
-
   .show-stage {
     margin-top: 20px;
     height: 70svh;
     min-height: 480px;
+    padding: 8px;
   }
 
   .sheet {
-    top: 8px;
-    left: 8px;
-    width: calc(100% - 16px);
-    height: calc(100% - 16px);
+    height: 100%;
+    aspect-ratio: auto;
+  }
+
+  .sheet iframe {
+    width: 100%;
+    height: 100%;
+    transform: none;
   }
 
   .steps {
