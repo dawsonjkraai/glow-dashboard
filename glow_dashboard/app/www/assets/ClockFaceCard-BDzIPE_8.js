@@ -1,1 +1,0 @@
-export{s as default}from"./cards-clock-kxinxDip.js";

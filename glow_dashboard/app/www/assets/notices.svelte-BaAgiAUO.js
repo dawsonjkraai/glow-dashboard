@@ -1,1 +1,0 @@
-import{Es as e,Ts as t,ds as n}from"./panel-DXBma_wS.js";var r=e({});function i(e,i){t(r,{...n(r),[e]:i})}function a(e){if(!e)return[];let t=n(r)[e.owner];if(!t)return[];try{return t.actions(e.id)}catch{return[]}}export{i as n,a as t};

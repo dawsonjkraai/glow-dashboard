@@ -1,1 +1,0 @@
-export{g as default}from"./cards-climate-OL4soEcA.js";

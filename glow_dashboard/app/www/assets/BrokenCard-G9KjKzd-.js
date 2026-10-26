@@ -1,0 +1,1 @@
+import{$o as e,Ms as t,Ns as n,Ss as r,Yo as i,gs as a,ts as o}from"./panel-D0adqhmN.js";var s=o(`<p> </p>`);function c(o,c){n(c,!0);function l(){throw Error(`Demo: ${c.card.id} always fails to render`)}var u=s(),d=r(u,!0);a(e=>i(d,e),[()=>l()]),e(o,u),t()}export{c as default};

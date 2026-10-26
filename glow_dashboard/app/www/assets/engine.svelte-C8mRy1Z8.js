@@ -1,1 +1,0 @@
-export{Kr as alertConfig,Yn as alerts}from"./panel-DXBma_wS.js";

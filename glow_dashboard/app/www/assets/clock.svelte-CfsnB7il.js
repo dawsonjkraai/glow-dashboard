@@ -1,1 +1,0 @@
-export{Ma as clock}from"./panel-DXBma_wS.js";

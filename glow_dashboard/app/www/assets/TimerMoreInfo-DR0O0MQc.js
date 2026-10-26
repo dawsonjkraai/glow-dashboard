@@ -1,1 +1,0 @@
-export{f as default}from"./cards-info-DWlSu16_.js";

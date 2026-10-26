@@ -1,15 +1,15 @@
 {
-  "version": "0.1.1",
-  "build": "Dq0p9Pbr",
-  "builtAt": "2026-10-26T18:47:59.715Z",
-  "entry": "assets/index-Dq0p9Pbr.js",
+  "version": "0.1.2",
+  "build": "AFZ19Y6_",
+  "builtAt": "2026-10-26T18:56:55.136Z",
+  "entry": "assets/index-AFZ19Y6_.js",
   "scripts": [
-    "assets/index-Dq0p9Pbr.js"
+    "assets/index-AFZ19Y6_.js"
   ],
   "css": [
     "assets/panel-BGb-smOQ.css"
   ],
   "preload": [
-    "assets/panel-DXBma_wS.js"
+    "assets/panel-D0adqhmN.js"
   ]
 }

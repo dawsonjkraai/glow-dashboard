@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.2
+
+- Music: a speaker you untick while music plays is muted at once (so the music never restarts), and
+  now let go soon after: out of the group and unmuted at the next song, when the music is paused or
+  stopped, or at once when something else (Spotify Connect) takes it. It used to stay muted.
+
 ## 0.1.1
 
 - Wall tablets: the add-on's port (8199) is on by default. Before, it started empty, so turning on
