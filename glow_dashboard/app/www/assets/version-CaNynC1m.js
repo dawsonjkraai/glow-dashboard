@@ -1,0 +1,1 @@
+var e=`0.1.0`,t=`production`,n=(()=>{if(typeof window>`u`)return null;let e=window.__PANEL_BUILD__;return typeof e==`string`&&e?e:null})();export{n,t as r,e as t};

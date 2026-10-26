@@ -1,0 +1,5 @@
+# Home Assistant's own base images (Alpine 3.22: Node 22, which the WLED bridge's WebSocket needs).
+build_from:
+  aarch64: ghcr.io/home-assistant/aarch64-base:3.22
+  amd64: ghcr.io/home-assistant/amd64-base:3.22
+  armv7: ghcr.io/home-assistant/armv7-base:3.22

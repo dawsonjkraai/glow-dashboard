@@ -1,0 +1,5 @@
+# The add-on's start script runs on Linux: never with Windows line endings.
+* text=auto eol=lf
+*.png binary
+*.woff2 binary
+*.jpg binary

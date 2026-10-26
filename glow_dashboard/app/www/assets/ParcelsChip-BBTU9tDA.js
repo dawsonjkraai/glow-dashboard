@@ -1,0 +1,1 @@
+export{r as default}from"./cards-parcels-B16kB8On.js";

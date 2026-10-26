@@ -1,0 +1,1 @@
+export{Ma as clock}from"./panel-CryQXxVX.js";

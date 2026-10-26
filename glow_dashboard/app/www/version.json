@@ -1,0 +1,15 @@
+{
+  "version": "0.1.0",
+  "build": "DR1C8u_V",
+  "builtAt": "2026-10-26T18:11:56.005Z",
+  "entry": "assets/index-DR1C8u_V.js",
+  "scripts": [
+    "assets/index-DR1C8u_V.js"
+  ],
+  "css": [
+    "assets/panel-BGb-smOQ.css"
+  ],
+  "preload": [
+    "assets/panel-CryQXxVX.js"
+  ]
+}

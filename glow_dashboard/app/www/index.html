@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" data-material="glass" data-glass="baked">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content" />
+    <meta name="theme-color" content="#0a0a0b" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Home</title>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <script>(function () {
+var fallback = {"build":"DR1C8u_V","entry":"assets/index-DR1C8u_V.js","scripts":["assets/index-DR1C8u_V.js"],"css":["assets/panel-BGb-smOQ.css"],"preload":["assets/panel-CryQXxVX.js"]};
+var started = false;
+function link(rel, href) {
+var l = document.createElement('link');
+l.rel = rel;
+l.href = href;
+document.head.appendChild(l);
+return l;
+}
+function failed() {
+var app = document.getElementById('app');
+if (!app || app.childElementCount) return;
+app.innerHTML = '<div style="min-height:100vh;display:grid;place-items:center;padding:24px;font:600 18px/1.5 system-ui,sans-serif;color:#e8e8ea;background:#0a0a0b;text-align:center"><div><p>The panel could not load. Copying a new version in? Give it a moment.</p><p><button onclick="location.reload()" style="margin-top:16px;min-height:56px;padding:0 28px;border:0;border-radius:28px;font:inherit;background:#e8e8ea;color:#0a0a0b">Try again</button></p></div></div>';
+}
+function start(v) {
+if (started) return;
+started = true;
+window.__PANEL_BUILD__ = v.build;
+var css = v.css || [];
+var left = css.length;
+var scripts = v.scripts && v.scripts.length ? v.scripts : [v.entry];
+var go = function () {
+// In order (async = false), as the build wrote them.
+scripts.forEach(function (src) {
+var s = document.createElement('script');
+s.type = 'module';
+s.async = false;
+s.src = src;
+s.onerror = failed;
+document.head.appendChild(s);
+});
+};
+// Fetch the entry and its chunks alongside the styles; run it once the styles are in, so
+// the first paint is styled.
+scripts.forEach(function (href) { link('modulepreload', href); });
+(v.preload || []).forEach(function (href) { link('modulepreload', href); });
+if (!left) return go();
+css.forEach(function (href) {
+var l = link('stylesheet', href);
+l.onload = l.onerror = function () { if (--left === 0) go(); };
+});
+}
+var timer = setTimeout(function () { start(fallback); }, 8000);
+fetch('version.json', { cache: 'no-store' })
+.then(function (r) { return r.ok ? r.json() : null; })
+.then(function (v) { clearTimeout(timer); start(v && v.entry ? v : fallback); })
+.catch(function () { clearTimeout(timer); start(fallback); });
+})();</script>
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+</html>
